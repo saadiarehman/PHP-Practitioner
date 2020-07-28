@@ -29,7 +29,12 @@
                    <strong><?="Assigned By : " ?></strong> <?= $tasks['assign_to']; ?>
                 </li>
                 <li>
-                   <strong><?="Status : " ?></strong> <?= $tasks['completed']? 'Completed' : "Incomplete" ;?>
+                   <strong><?="Status : " ?></strong> 
+                     <?php if ($tasks['completed']):?>
+                        <?= "finished"; ?>
+                     <?php else: ?>
+                        <?= "Incomplete"; ?>
+                     <?php endif; ?> 
                 </li>            
         </ul>
 </body>
