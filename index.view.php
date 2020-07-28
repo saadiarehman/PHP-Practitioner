@@ -10,20 +10,27 @@
             padding:20px;
             text-align:center;
         }
+         li{
+            list-style-type:none;
+        }
     
     </style>
 </head>
 <body>
+                        <h1>My Task Today</h1>
         <ul>
-            <?php foreach($tasks as $feature=>$value): ?>
                 <li>
-                    <strong>
-                        <?= $feature ?>
-                    </strong>
-                        <?= $value ?>
+                   <strong><?="Task : " ?></strong> <?= $tasks['title']; ?>
                 </li>
-            <?php endforeach; ?>
+                <li>
+                   <strong><?="Due Date : " ?></strong> <?= $tasks['due']; ?>
+                </li>
+                <li>
+                   <strong><?="Assigned By : " ?></strong> <?= $tasks['assign_to']; ?>
+                </li>
+                <li>
+                   <strong><?="Status : " ?></strong> <?= $tasks['completed']? 'Completed' : "Incomplete" ;?>
+                </li>            
         </ul>
-    
 </body>
 </html>

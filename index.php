@@ -1,14 +1,11 @@
 <?php
-// create Associative array of task,display it with built in function,add a value,delete a value,
+// Learn how to display boolean using ternary operators $ capitilize first words using built in function
 $tasks = [
     'title' => 'revision',
     'due' => '31st of july',
     'assign_to' => 'saadia',
     'completed' =>  false
 ];
-//$tasks['subject'] ='cs'; ---->to add value
-//unset ($tasks['subject'] ); ----> to delete value
-die(var_dump($tasks));
 require 'index.view.php';
 
 ?>
